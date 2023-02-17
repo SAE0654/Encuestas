@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brightspace</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <main>
+        <div class="header_sec">
+            <img src="./assets/img/SAE.jpg" alt="Logotipo" class="logotipo">
+        </div>
+        <h1>Encuesta Docente</h1>
+        <p>Selecciona tu carrera y tu grupo para poder responder tus encuestas docentes.</p>
+        <form method="post">
+            <div class="selection_grp">
+                <select name="carrera" id="carrera">
+                    <option value="default" selected>Selecciona tu carrera</option>
+                    <option value="1">Animación y Efectos Visuales</option>
+                    <option value="2">Diseño de Videojuegos</option>
+                    <option value="3">Negocios de la Música</option>
+                    <option value="4">Programación de Videojuegos</option>
+                    <option value="5">Ingeniería en Audio</option>
+                    <option value="6">Comunicación y Nuevos Medios</option>
+                    <option value="7">Cine Digital y Postproducción</option>
+                    <option value="8">Comunicación Transmedia</option>
+                    <!-- <option value="9">Recursadores</option> -->
+                </select>
+                <select name="grupos" id="grupos" onchange="verifyLinkGenerator(value)">
+                    <option value="defaultG">No hay grupos disponibles</option>
+                </select>
+                <a class="linkSuper" target="_blank" rel="noref" href='https://docs.google.com/forms/d/e/1FAIpQLScQjaPPk9tn7OBIihZ9r_NRdJ7W0z70BAIUFNNAa1lGD4mnLQ/viewform?usp=sf_link'>Encuesta de supervisión</a>
+            </div>
+            <div class="list_group" id="list_grp"></div>
+            <img src="./assets/img/FOOTER.png" alt="">
+        </form>
+    </main>
+    <script src="./js/brightspace.js"></script>
+</body>
+</html>
